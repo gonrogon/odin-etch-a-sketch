@@ -18,7 +18,6 @@ function setupGrid(width, height)
     }
 
     grid.addEventListener("mouseover", onMouseOver);
-    grid.addEventListener("mouseout",  onMouseOut);
 }
 
 function setup()
@@ -40,19 +39,15 @@ function setup()
 
 function onMouseOver(evt)
 {
-    let cell = evt.target;
-    setColor(cell, "#f00");
+    let r = Math.round(Math.random() * 255);
+    let g = Math.round(Math.random() * 255);
+    let b = Math.round(Math.random() * 255);
+
+    setColorRGB(evt.target, r, g, b);
 }
 
-function onMouseOut(evt)
-{
-    let cell = evt.target;
-    setColor(cell, "#a77");
-}
-
-function setColor(cell, color)
-{
-    cell.style.backgroundColor = color;
+function setColorRGB(cell, r, g, b) {
+    cell.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
 setupGrid(16, 16);
