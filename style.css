@@ -1,0 +1,15 @@
+#grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.cell {
+    box-sizing: border-box;
+    flex-basis: 6.25%;
+    flex-grow: 1;
+    aspect-ratio: 1;
+    background-color: #aaa;
+    border: 1px solid #fff;
+}
