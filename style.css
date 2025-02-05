@@ -1,9 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.controls {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px 0;
+}
+
 #grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 800px;
     background-color: #000;
+    margin: auto;
 }
 
 .cell {
