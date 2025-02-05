@@ -3,8 +3,8 @@
 function setup()
 {
     let button = document.querySelector("#buttonSize");
-    button.addEventListener('click', e => {
-        let result = prompt('Enter the new size (max 100)', 16);
+    button.addEventListener("click", e => {
+        let result = prompt("Enter the new size (max 100)", 16);
         let number = parseInt(result);
 
         if (isNaN(number) || number <= 0 || number > 100)
@@ -15,6 +15,15 @@ function setup()
 
         setupGrid(number, number);
     })
+
+    let buttonClear = document.querySelector("#buttonClear");
+    buttonClear.addEventListener("click", e => {
+        let cells = document.querySelectorAll(".cell");
+        for (let cell of cells)
+        {
+            setOpacity(cell, 0);
+        }
+    });
     // Set up the initial grid.
     setupGrid(16, 16);
 }
