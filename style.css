@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 800px;
+    background-color: #000;
 }
 
 .cell {
@@ -10,4 +11,5 @@
     flex-grow: 1;
     aspect-ratio: 1;
     background-color: #aaa;
+    opacity: 0;
 }
