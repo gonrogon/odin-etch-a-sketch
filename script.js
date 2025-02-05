@@ -22,6 +22,7 @@ function setup()
         for (let cell of cells)
         {
             setOpacity(cell, 0);
+            removeColor(cell);
         }
     });
     // Set up the initial grid.
@@ -96,6 +97,10 @@ function hasColor(cell) {
 
 function setColorRGB(cell, r, g, b) {
     cell.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+
+function removeColor(cell) {
+    cell.style.backgroundColor = '';
 }
 
 setup();
